@@ -6,5 +6,5 @@ Don't Let the Sundea Melt is a modern twist to a childhood game. The objective o
 ## **How to Play**
 jgjg
 
-### **Trello Link**
+## **Trello Link**
 [Project Board Status](https://trello.com/invite/b/GFtXEEpk/2bfea331012bd5a3347f5aaa947b0b17/sundea-melts)
