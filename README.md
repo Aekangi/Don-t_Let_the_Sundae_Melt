@@ -15,4 +15,4 @@ The game is very simple. One needs to guess the word by clicking letters they th
 Hope you enjoy the game :)
 
 ## **Trello Link**
-[Project Board Status](https://trello.com/invite/b/GFtXEEpk/2bfea331012bd5a3347f5aaa947b0b17/sundea-melts)
+[Project Board Status](https://trello.com/invite/b/oARWz5b3/10f25b80180a7ebf8db8353a20e6cdd6/dont-let-the-sundea-dissapear)
