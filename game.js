@@ -1,4 +1,6 @@
 const alphabet = document.querySelector('.alphabet')
+let alphabetArray = Array.from(alphabet)
+console.log(alphabetArray)
 const dashes = document.querySelector('.dashes')
 let word = ''
 const maxLives = 6
@@ -33,8 +35,6 @@ const dashSign = () => {
     .join('')
   dashes.innerHTML = flavorIndex
 }
-
-// letter be replaced
 
 // functions to be called- i put them in the order that i'm writing the function..but put them accordingly!!!!
 
