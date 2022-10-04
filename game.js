@@ -57,13 +57,17 @@ pickFlavor()
 const getValue = () => {
   console.log(event.target.innerText)
   let letter = event.target.innerText
+  letterGuessed.push(letter)
+  let guess = letterGuessed[letterGuessed.length - 1].toLowerCase()
+  console.log(word.includes(guess))
+  console.log(guess)
   if (word.includes(letter)) {
-    letterGuessed.push(letter)
     dashSign()
   } else {
     livesLeft.innerHTML = livesLeft.innerHTML - 1
     lostGame()
   }
+  console.log(letterGuessed)
 }
 
 const alphClick = () => {
@@ -99,11 +103,11 @@ alphClick()
 const dashSign = () => {
   const flavorIndex = word
     .split('')
-    .map((alph) => {
-      if (letterGuessed.indexOf(alph) < 0) {
+    .map((letter) => {
+      if (letterGuessed.indexOf(letter) < 0) {
         return '-'
       } else {
-        return alph
+        return letter
       }
     })
     .join('')
