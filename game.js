@@ -96,11 +96,11 @@ alphClick()
 const dashSign = () => {
   const flavorIndex = word
     .split('')
-    .map((letter) => {
-      if (letterGuessed.indexOf(letter) < 0) {
+    .map((alpha) => {
+      if (letterGuessed.indexOf(alpha) < 0) {
         return '-'
       } else {
-        return letter
+        return alpha
       }
     })
     .join('')
@@ -121,14 +121,9 @@ const lostGame = () => {
 }
 
 const restart = () => {
-  letterGuessed = []
-  livesLeft.innerHTML = 6
-  gameOver.innerHTML = ''
-  pickFlavor()
-
+  location.reload()
   // sundae images back to normal
 }
-restart()
 
 // images need to be replaced with each incorrect guess
 
