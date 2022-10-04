@@ -12,9 +12,6 @@
     <h1>Don't let the Sundae Disappear</h1>
     <p>Guess the flavor by pressing on a letter</p>
     <div class="left-side">
-        <div class="hint">
-            <button><h2>Hint</h2></button>
-        </div>
         <div class="lives">
             <h2>Lives Left</h2>
             <div><span class="livesLeft">6</span> out of <span class="maxLives">6</span></div>
@@ -29,7 +26,7 @@
         <div class="alphabet">
             <div class="alph" id="A"><button>A</button></div>
             <div class="alph" id="B"><button>B</button></div>
-            <div class="alph" id="C"><button>C</button></div>
+            <div class="alph" id="C" onclick="alphClick()"><button>C</button></div>
             <div class="alph" id="D"><button>D</button></div>
             <div class="alph" id="E"><button>E</button></div>
             <div class="alph" id="F"><button>F</button></div>
@@ -57,7 +54,7 @@
     </div>
     <div class="done">
         <h2 id="gameOverText"></h2>
-        <button id="play">Reset</button>
+        <button id="play">Restart</button>
     </div>
 </body>
 </html>

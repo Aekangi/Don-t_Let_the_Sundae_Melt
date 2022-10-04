@@ -25,12 +25,15 @@ const x = document.getElementById('X')
 const y = document.getElementById('Y')
 const z = document.getElementById('Z')
 
+const startOver = document.getElementById('play')
+const gameOver = document.getElementById('gameOverText')
+const livesLeft = document.querySelector('.livesLeft')
+livesLeft.innerHTML = '6'
 const alph = document.querySelectorAll('.alph')
 let alphArray = Array.from(alph)
 const dashes = document.querySelector('.dashes')
 let word = ''
 const maxLives = 6
-let livesLeft = 6
 let letterGuessed = []
 
 let flavors = [
@@ -52,8 +55,8 @@ const pickFlavor = () => {
 const dashSign = () => {
   const flavorIndex = word
     .split('')
-    .map((word) => {
-      if (letterGuessed.indexOf(word) <= -1) {
+    .map((alph) => {
+      if (letterGuessed.indexOf(alph) <= -1) {
         return '-'
       } else {
         return alph
@@ -63,11 +66,27 @@ const dashSign = () => {
   dashes.innerHTML = flavorIndex
 }
 
-// make alphabet letters clickable
+// Game Won?
+if (letterGuessed === word) {
+  gameOver.innerHTML = 'You Won!!'
+}
+// game lost?
+if (livesLeft.innerHTML === '0') {
+  gameOver.innerHTML = 'The sundae disappeared, you lost!'
+}
+// mistakes number needs to change
 
-//
+// reset the board
+const restart = () => {
+  letterGuessed = []
+  livesLeft.innerHTML = '6'
+  // sundae images back to normal
+}
+
+// images need to be replaced with each incorrect guess
 
 // functions to be called- i put them in the order that i'm writing the function..but put them accordingly!!!!
+
 m.addEventListener('click', dashSign)
 pickFlavor()
 dashSign()
