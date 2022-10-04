@@ -37,37 +37,30 @@ const maxLives = 6
 let letterGuessed = []
 
 let flavors = [
-  'mint',
-  'vanilla',
-  'chocolate',
-  'strawberry',
-  'coffee',
-  'pistachio'
+  'MINT',
+  'VANILLA',
+  'CHOCOLATE',
+  'STRAWBERRY',
+  'COFFEE',
+  'PISTACHIO'
 ]
 
-// function to pick a flavor at random
 const pickFlavor = () => {
   word = flavors[Math.floor(Math.random() * flavors.length)]
 }
 pickFlavor()
 
-// get the dashes for the word to show- (different # of dashes per word)
-
-// assign a value to each letter based on the id
 const getValue = () => {
-  console.log(event.target.innerText)
   let letter = event.target.innerText
   letterGuessed.push(letter)
   let guess = letterGuessed[letterGuessed.length - 1].toLowerCase()
-  console.log(word.includes(guess))
-  console.log(guess)
   if (word.includes(letter)) {
     dashSign()
+    gameWon()
   } else {
     livesLeft.innerHTML = livesLeft.innerHTML - 1
     lostGame()
   }
-  console.log(letterGuessed)
 }
 
 const alphClick = () => {
@@ -114,28 +107,30 @@ const dashSign = () => {
   dashes.innerHTML = flavorIndex
 }
 dashSign()
-console.log(word)
-// Game Won?
-if (letterGuessed === word) {
-  gameOver.innerHTML = 'You Won!!'
+
+const gameWon = () => {
+  if (letterGuessed === word) {
+    alert((gameOver.innerHTML = 'You Won!!'))
+  }
 }
-// game lost?
+
 const lostGame = () => {
   if (parseInt(livesLeft.innerHTML) <= 0) {
     gameOver.innerHTML = 'The sundae disappeared, you lost!'
   }
 }
-// mistakes number needs to change
 
-// reset the board
 const restart = () => {
   letterGuessed = []
   livesLeft.innerHTML = 6
   gameOver.innerHTML = ''
   pickFlavor()
+
   // sundae images back to normal
 }
+restart()
+
 // images need to be replaced with each incorrect guess
 
-// functions to be called- i put them in the order that i'm writing the function..but put them accordingly!!!!
 startOver.addEventListener('click', restart)
+console.log(word)
