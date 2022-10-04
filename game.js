@@ -52,6 +52,26 @@ const pickFlavor = () => {
 
 // get the dashes for the word to show- (different # of dashes per word)
 
+// const alphClick = () => {
+//   a.addEventListener('click', () => {
+//     console.log('test')
+//   })
+// }
+// alphClick()
+
+// assign a value to each letter based on the id
+alphArray.forEach((alphArrays) => {
+  let newArr = ''
+  newArr = alphArrays.id
+  if (word.includes(newArr.id)) {
+    indexOf(newArr.id) = 1
+  }
+  else {
+    return null
+  }
+
+})
+
 const dashSign = () => {
   const flavorIndex = word
     .split('')
@@ -80,13 +100,14 @@ if (livesLeft.innerHTML === '0') {
 const restart = () => {
   letterGuessed = []
   livesLeft.innerHTML = '6'
+  pickFlavor()
   // sundae images back to normal
 }
 
 // images need to be replaced with each incorrect guess
 
 // functions to be called- i put them in the order that i'm writing the function..but put them accordingly!!!!
-
-m.addEventListener('click', dashSign)
+startOver.addEventListener('click', restart)
+a.addEventListener('click', dashSign)
 pickFlavor()
 dashSign()
