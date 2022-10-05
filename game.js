@@ -25,6 +25,8 @@ const x = document.getElementById('X')
 const y = document.getElementById('Y')
 const z = document.getElementById('Z')
 
+const begin = document.querySelector('begin')
+
 const startOver = document.getElementById('play')
 const gameOver = document.getElementById('gameOverText')
 const livesLeft = document.querySelector('.livesLeft')
@@ -62,6 +64,7 @@ const getValue = () => {
     lostGame()
   }
 }
+//
 
 const dashSign = () => {
   const flavorIndex = word
@@ -78,14 +81,9 @@ const dashSign = () => {
 }
 dashSign()
 
-const removeUsedLetter = (alph) => {
-  let index = alphArray.indexOf(alph)
-  alphArray.remove(alphClick)
-}
-
 const gameWon = () => {
   if (letterGuessed === word) {
-    alert((gameOver.innerHTML = 'You Won!!'))
+    gameOver.innerHTML = 'Yay the sundae survived!!'
   }
 }
 
