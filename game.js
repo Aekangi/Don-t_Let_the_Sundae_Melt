@@ -63,36 +63,6 @@ const getValue = () => {
   }
 }
 
-const alphClick = () => {
-  a.addEventListener('click', getValue)
-  b.addEventListener('click', getValue)
-  c.addEventListener('click', getValue)
-  d.addEventListener('click', getValue)
-  e.addEventListener('click', getValue)
-  f.addEventListener('click', getValue)
-  g.addEventListener('click', getValue)
-  h.addEventListener('click', getValue)
-  i.addEventListener('click', getValue)
-  j.addEventListener('click', getValue)
-  k.addEventListener('click', getValue)
-  l.addEventListener('click', getValue)
-  m.addEventListener('click', getValue)
-  n.addEventListener('click', getValue)
-  o.addEventListener('click', getValue)
-  p.addEventListener('click', getValue)
-  q.addEventListener('click', getValue)
-  r.addEventListener('click', getValue)
-  s.addEventListener('click', getValue)
-  t.addEventListener('click', getValue)
-  u.addEventListener('click', getValue)
-  v.addEventListener('click', getValue)
-  w.addEventListener('click', getValue)
-  x.addEventListener('click', getValue)
-  y.addEventListener('click', getValue)
-  z.addEventListener('click', getValue)
-}
-alphClick()
-
 const dashSign = () => {
   const flavorIndex = word
     .split('')
@@ -108,6 +78,11 @@ const dashSign = () => {
 }
 dashSign()
 
+const removeUsedLetter = (alph) => {
+  let index = alphArray.indexOf(alph)
+  alphArray.remove(alphClick)
+}
+
 const gameWon = () => {
   if (letterGuessed === word) {
     alert((gameOver.innerHTML = 'You Won!!'))
@@ -116,7 +91,7 @@ const gameWon = () => {
 
 const lostGame = () => {
   if (parseInt(livesLeft.innerHTML) <= 0) {
-    gameOver.innerHTML = 'The sundae disappeared, you lost!'
+    gameOver.innerHTML = `The sundae disappeared, you lost! The answer was ${word}`
   }
 }
 
