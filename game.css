@@ -1,16 +1,73 @@
+.forCSS {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-auto-rows: minmax(100px, auto);
+    justify-items: stretch;
+    align-items: stretch;
+}
+.leftSide {
+    grid-column: 1/2;
+    grid-row: 1/4;
+}
+.middleBoard {
+    grid-column: 2/3;
+    grid-row: 1/4;
+
+}
+
+.right {
+grid-column: 3/4;
+grid-row: 1/4;
+}
+
+
 h1 {
+    font-family: 'Lobster', cursive;
     text-align: center;
 }
 p {
+    font-family: 'Indie Flower', cursive;
     text-align: center;
 }
-.alphabet {
-    display: grid;
-    grid-template-columns: 40px 40px 40px 40px 40px 40px;
-    grid-template-rows: 40px 40px 40px 40px 40px;
-    margin-top: 20px;
+
+.lives {
+    font-family: 'Indie Flower', cursive;
+    font-size: 40px;
+    text-decoration:underline;
+    margin-top: 25%;
+    margin-left: 25%;
+}
+.lives1 {
+    font-family: 'Indie Flower', cursive;
+    font-size: 40px;
+    margin-left: 22%;
+    margin-top: -10%;
 }
 
-button.disable {
-    background-color: black;
+#gameOverText {
+    font-family: 'Rock Salt', cursive;
 }
+
+img {
+    align-items: center;
+}
+
+#play {
+    justify-self: end;
+    position: fixed;
+    left: 47%;
+}
+
+.dashes {
+    margin-top: 25%;
+    font-size: 75px;
+   
+}
+
+.alphabet {
+    display: grid;
+    grid-template-columns: 60px 60px 60px 60px 60px 60px;
+    grid-template-rows: 60px 60px 60px 60px 60px;
+    margin-top: 20%;
+}
+

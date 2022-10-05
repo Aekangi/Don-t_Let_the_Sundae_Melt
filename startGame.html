@@ -1,7 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">    
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="game.css">
@@ -11,62 +20,69 @@
 <body>
     <h1>Don't let the Sundae Disappear</h1>
     <p>Guess the flavor by pressing on a letter</p>
-    <div class="left-side">
-        <div class="lives">
-            <h2>Lives Left</h2>
-            <div><span class="livesLeft">6</span> out of <span class="maxLives">6</span></div>
+    <div class="forCSS">
+        <div class="leftSide">
+            <div>
+                <h2 class="lives">Lives Left</h2>
+                <div class="lives1"><span class="livesLeft">6</span> out of <span class="maxLives">6</span></div>
+            </div>
+            <div>
+                <h2 id="gameOverText"></h2>
+            </div>
         </div>
-    </div>
-    <div class="middleBoard">
-        <div class="iceCreamBoard"></div>
-            <img src="" alt="" id="poof">
-            <img id="cone" src="" alt="">
-            <img id="oneScoop" src="" alt="">
-            <img id="twoScoops" src="" alt="">
-            <img id="hotFudge" src="" alt="">
-            <img id="sprinkles" src="" alt="">
-            <img id="cherry" src="" alt="">
-
-    </div>
-    <div class="right">
-        <div class="dashes">The word to be guessed goes here!</div>
-        <div class="alphabet">
-            <div class="alph" id="A" onclick= getValue()><button>A</button></div>
-            <div class="alph" id="B" onclick= getValue()><button>B</button></div>
-            <div class="alph" id="C" onclick= getValue()><button>C</button></div>
-            <div class="alph" id="D" onclick= getValue()><button>D</button></div>
-            <div class="alph" id="E" onclick= getValue()><button>E</button></div>
-            <div class="alph" id="F" onclick= getValue()><button>F</button></div>
-            <div class="alph" id="G" onclick= getValue()><button>G</button></div>
-            <div class="alph" id="H" onclick= getValue()><button>H</button></div>
-            <div class="alph" id="I" onclick= getValue()><button>I</button></div>
-            <div class="alph" id="J" onclick= getValue()><button>J</button></div>
-            <div class="alph" id="K" onclick= getValue()><button>K</button></div>
-            <div class="alph" id="L" onclick= getValue()><button>L</button></div>
-            <div class="alph" id="M" onclick= getValue()><button>M</button></div>
-            <div class="alph" id="N" onclick= getValue()><button>N</button></div>
-            <div class="alph" id="O" onclick= getValue()><button>O</button></div>
-            <div class="alph" id="P" onclick= getValue()><button>P</button></div>
-            <div class="alph" id="Q" onclick= getValue()><button>Q</button></div>
-            <div class="alph" id="R" onclick= getValue()><button>R</button></div>
-            <div class="alph" id="S" onclick= getValue()><button>S</button></div>
-            <div class="alph" id="T" onclick= getValue()><button>T</button></div>
-            <div class="alph" id="U" onclick= getValue()><button>U</button></div>
-            <div class="alph" id="V" onclick= getValue()><button>V</button></div>
-            <div class="alph" id="W" onclick= getValue()><button>W</button></div>
-            <div class="alph" id="X" onclick= getValue()><button>X</button></div>
-            <div class="alph" id="Y" onclick= getValue()><button>Y</button></div>
-            <div class="alph" id="Z" onclick= getValue()><button>Z</button></div>
-        </div>   
-    </div>
-    <div class="done">
-        <h2 id="gameOverText"></h2>
-        <button id="play">Restart</button>
-    </div>
+        <div class="middleBoard">
+            <div class="iceCreamBoard">
+                <img src="" alt="" id="poof">
+                <img id="cone" src="" alt="">
+                <img id="oneScoop" src="" alt="">
+                <img id="twoScoops" src="" alt="">
+                <img id="hotFudge" src="" alt="">
+                <img id="sprinkles" src="" alt="">
+                <img id="cherry" src="" alt="">
+            </div>
+            <div>    
+                <button id="play">Restart</button>
+            </div>
+        </div>
+        <div class="right">
+            <div class="dashes">The word to be guessed goes here!</div>
+            <div class="alphabet">
+                <div class="alph" id="A" onclick= getValue()><button>A</button></div>
+                <div class="alph" id="B" onclick= getValue()><button>B</button></div>
+                <div class="alph" id="C" onclick= getValue()><button>C</button></div>
+                <div class="alph" id="D" onclick= getValue()><button>D</button></div>
+                <div class="alph" id="E" onclick= getValue()><button>E</button></div>
+                <div class="alph" id="F" onclick= getValue()><button>F</button></div>
+                <div class="alph" id="G" onclick= getValue()><button>G</button></div>
+                <div class="alph" id="H" onclick= getValue()><button>H</button></div>
+                <div class="alph" id="I" onclick= getValue()><button>I</button></div>
+                <div class="alph" id="J" onclick= getValue()><button>J</button></div>
+                <div class="alph" id="K" onclick= getValue()><button>K</button></div>
+                <div class="alph" id="L" onclick= getValue()><button>L</button></div>
+                <div class="alph" id="M" onclick= getValue()><button>M</button></div>
+                <div class="alph" id="N" onclick= getValue()><button>N</button></div>
+                <div class="alph" id="O" onclick= getValue()><button>O</button></div>
+                <div class="alph" id="P" onclick= getValue()><button>P</button></div>
+                <div class="alph" id="Q" onclick= getValue()><button>Q</button></div>
+                <div class="alph" id="R" onclick= getValue()><button>R</button></div>
+                <div class="alph" id="S" onclick= getValue()><button>S</button></div>
+                <div class="alph" id="T" onclick= getValue()><button>T</button></div>
+                <div class="alph" id="U" onclick= getValue()><button>U</button></div>
+                <div class="alph" id="V" onclick= getValue()><button>V</button></div>
+                <div class="alph" id="W" onclick= getValue()><button>W</button></div>
+                <div class="alph" id="X" onclick= getValue()><button>X</button></div>
+                <div class="alph" id="Y" onclick= getValue()><button>Y</button></div>
+                <div class="alph" id="Z" onclick= getValue()><button>Z</button></div>
+            </div>   
+        </div>
+        
+        </div>
+        
 </body>
 </html>
-
-
-
-
-
+    
+    
+    
+    
+    
+    
