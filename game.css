@@ -10,3 +10,7 @@ p {
     grid-template-rows: 40px 40px 40px 40px 40px;
     margin-top: 20px;
 }
+
+button.disable {
+    background-color: black;
+}
