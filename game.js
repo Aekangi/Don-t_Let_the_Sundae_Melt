@@ -68,17 +68,14 @@ const getValue = () => {
   if (word.includes(letter)) {
     dashSign()
     gameWon()
-    // disable()
   } else {
-    livesLeft.innerHTML = livesLeft.innerHTML - 1
-    // disable()
+    if (livesLeft.innerHTML > 0) {
+      livesLeft.innerHTML = livesLeft.innerHTML - 1
+    }
     sundaeImage()
     lostGame()
   }
 }
-// function disable() {
-//   a.disabled = true
-// }
 
 const dashSign = () => {
   const flavorIndex = word
