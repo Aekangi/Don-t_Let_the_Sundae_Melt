@@ -78,11 +78,8 @@ img {
     margin-top: 20%;
     margin-left: 30px;
 }
-.alph {
-    opacity: 1;
 
-}
 
-.alph button:focus {
+/* .alph button:focus {
 opacity: 0;
-}
+} */

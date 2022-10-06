@@ -54,15 +54,22 @@ pickFlavor()
 const gameWon = () => {
   if (flavorIndex === word) {
     gameOver.innerHTML = 'Yay the sundae survived!!'
+    alph.forEach((el) => {
+      el.removeEventListener('click', getValue)
+    })
   }
 }
 // remove/disable key after use
 const lostGame = () => {
   if (parseInt(livesLeft.innerHTML) === 0) {
     gameOver.innerHTML = `The sundae disappeared, you lost! The answer was ${word}!`
+    alph.forEach((el) => {
+      el.removeEventListener('click', getValue)
+    })
   }
 }
-const getValue = () => {
+const getValue = (event) => {
+  event.target.style.display = 'none'
   let letter = event.target.innerHTML
   letterGuessed.push(letter)
   let guess = letterGuessed[letterGuessed.length - 1].toLowerCase()
@@ -93,6 +100,10 @@ const dashSign = () => {
   dashes.innerHTML = flavorIndex
 }
 dashSign()
+
+alph.forEach((el) => {
+  el.addEventListener('click', getValue)
+})
 
 const sundaeImage = () => {
   if (livesLeft.innerHTML === '6') {
@@ -143,10 +154,7 @@ sundaeImage()
 const restart = () => {
   location.reload()
   sundaeImage()
-  // sundae images back to normal
 }
-
-// images need to be replaced with each incorrect guess
 
 startOver.addEventListener('click', restart)
 console.log(word)
