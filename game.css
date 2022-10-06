@@ -1,3 +1,18 @@
+body {
+    background-image: url('https://png.pngitem.com/pimgs/s/231-2314271_transparent-sprinkles-confetti-illustration-hd-png-download.png');
+    background-size: cover;
+    
+}
+h1 {
+    font-family: 'Lobster', cursive;
+    text-align: center;
+    font-size: 45px;
+}
+p {
+    font-family: 'Indie Flower', cursive;
+    text-align: center;
+    font-size: 25px;
+}
 .forCSS {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
@@ -21,14 +36,6 @@ grid-row: 1/4;
 }
 
 
-h1 {
-    font-family: 'Lobster', cursive;
-    text-align: center;
-}
-p {
-    font-family: 'Indie Flower', cursive;
-    text-align: center;
-}
 
 .lives {
     font-family: 'Indie Flower', cursive;
@@ -40,7 +47,7 @@ p {
 .lives1 {
     font-family: 'Indie Flower', cursive;
     font-size: 40px;
-    margin-left: 22%;
+    margin-left: 45%;
     margin-top: -10%;
 }
 
@@ -69,5 +76,13 @@ img {
     grid-template-columns: 60px 60px 60px 60px 60px 60px;
     grid-template-rows: 60px 60px 60px 60px 60px;
     margin-top: 20%;
+    margin-left: 30px;
+}
+.alph {
+    opacity: 1;
+
 }
 
+.alph button:focus {
+opacity: 0;
+}

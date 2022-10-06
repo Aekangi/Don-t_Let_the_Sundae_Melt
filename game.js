@@ -33,6 +33,7 @@ const alph = document.querySelectorAll('.alph')
 let alphArray = Array.from(alph)
 const dashes = document.querySelector('.dashes')
 let word = ''
+let flavorIndex = '0'
 const maxLives = 6
 let letterGuessed = []
 
@@ -51,11 +52,11 @@ const pickFlavor = () => {
 pickFlavor()
 
 const gameWon = () => {
-  if (dashSign === word) {
+  if (flavorIndex === word) {
     gameOver.innerHTML = 'Yay the sundae survived!!'
   }
 }
-
+// remove/disable key after use
 const lostGame = () => {
   if (parseInt(livesLeft.innerHTML) === 0) {
     gameOver.innerHTML = `The sundae disappeared, you lost! The answer was ${word}!`
@@ -78,22 +79,22 @@ const getValue = () => {
 }
 
 const dashSign = () => {
-  const flavorIndex = word
+  flavorIndex = word
     .split('')
-    .map((alpha) => {
-      if (letterGuessed.indexOf(alpha) < 0) {
+    .map((alph) => {
+      if (letterGuessed.indexOf(alph) < 0) {
         return '-'
       } else {
-        return alpha
+        return alph
       }
     })
     .join('')
+
   dashes.innerHTML = flavorIndex
 }
 dashSign()
 
 const sundaeImage = () => {
-  console.log(livesLeft.innerHTML)
   if (livesLeft.innerHTML === '6') {
     document.getElementById('cherry').src =
       'https://images.unsplash.com/photo-1528821154947-1aa3d1b74941?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hlcnJ5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60'
