@@ -138,7 +138,7 @@ const sundaeImage = () => {
   } else if (livesLeft.innerHTML === '1') {
     document.getElementById('oneScoop').src = ''
     document.getElementById('cone').src =
-      'https://images.unsplash.com/photo-1559703248-dcaaec9fab78?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80'
+      '/Users/aekangipatel/GA_SEIR/Projects/Don-t_Let_the_Sundea_Melt-/images/cone.jpg'
     // document.getElementById('cone').style.height = '183px'
     // document.getElementById('cone').style.height = auto
   } else {

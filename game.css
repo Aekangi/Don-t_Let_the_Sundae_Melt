@@ -1,7 +1,6 @@
 body {
     background-image: url('https://png.pngitem.com/pimgs/s/231-2314271_transparent-sprinkles-confetti-illustration-hd-png-download.png');
     background-size: cover;
-    
 }
 h1 {
     font-family: 'Lobster', cursive;
@@ -63,12 +62,13 @@ img {
     justify-self: end;
     position: fixed;
     left: 47%;
+    border: 1px solid black;
 }
 
 .dashes {
     margin-top: 25%;
     font-size: 75px;
-   
+
 }
 
 .alphabet {
@@ -78,7 +78,14 @@ img {
     margin-top: 20%;
     margin-left: 30px;
 }
-
+.alph {
+    text-align: center;
+    font-size: 40px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 5px;
+    
+}
 
 /* .alph button:focus {
 opacity: 0;
