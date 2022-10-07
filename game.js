@@ -53,7 +53,7 @@ pickFlavor()
 
 const gameWon = () => {
   if (flavorIndex === word) {
-    gameOver.innerHTML = 'Yay the sundae survived!!'
+    gameOver.innerHTML = 'Yay!! the sundae survived!!'
     alph.forEach((el) => {
       el.removeEventListener('click', getValue)
     })
