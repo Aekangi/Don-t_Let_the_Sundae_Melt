@@ -5,12 +5,14 @@ body {
 h1 {
     font-family: 'Lobster', cursive;
     text-align: center;
-    font-size: 45px;
+    font-size: 60px;
+    color: rgb(238, 128, 183);
 }
 p {
     font-family: 'Indie Flower', cursive;
     text-align: center;
     font-size: 25px;
+    color: rgb(54, 7, 30);
 }
 .forCSS {
     display: grid;
@@ -42,6 +44,7 @@ grid-row: 1/4;
     text-decoration:underline;
     margin-top: 25%;
     margin-left: 25%;
+    color: rgb(238, 128, 183);
 }
 .lives1 {
     font-family: 'Indie Flower', cursive;
@@ -63,11 +66,13 @@ img {
     position: fixed;
     left: 47%;
     border: 1px solid black;
+    color: rgb(238, 128, 183);
 }
 
 .dashes {
     margin-top: 25%;
     font-size: 75px;
+    color: rgb(238, 128, 183);
 
 }
 

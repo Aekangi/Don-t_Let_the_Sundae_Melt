@@ -59,7 +59,6 @@ const gameWon = () => {
     })
   }
 }
-// remove/disable key after use
 const lostGame = () => {
   if (parseInt(livesLeft.innerHTML) === 0) {
     gameOver.innerHTML = `The sundae disappeared, you lost! The answer was ${word}!`
@@ -107,46 +106,26 @@ alph.forEach((el) => {
 
 const sundaeImage = () => {
   if (livesLeft.innerHTML === '6') {
-    document.getElementById('cherry').src =
-      'https://images.unsplash.com/photo-1528821154947-1aa3d1b74941?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hlcnJ5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60'
-    // document.getElementById('cherry').style.height = '183px'
-    // document.getElementById('cherry').style.height = auto
+    document.getElementById('cherry').src = './images/cherry.jpg'
   } else if (livesLeft.innerHTML === '5') {
     document.getElementById('cherry').src = ''
-    document.getElementById('sprinkles').src =
-      'https://images.unsplash.com/photo-1646318753516-078a7ddcc770?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8aWNlJTIwY3JlYW0lMjBjb25lJTIwc3VuZGFlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60'
-    // document.getElementById('sprinkles').style.height = '183px'
-    // document.getElementById('sprinkles').style.height = auto
+    document.getElementById('sprinkles').src = './images/sprinkles.jpg'
   } else if (livesLeft.innerHTML === '4') {
     document.getElementById('sprinkles').src = ''
-    document.getElementById('hotFudge').src =
-      'https://plus.unsplash.com/premium_photo-1661286645287-b7084e5a41d9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8aWNlJTIwY3JlYW0lMjBjb25lJTIwc3VuZGFlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60'
-    // document.getElementById('hotFudge').style.height = '183px'
-    // document.getElementById('hotFudge').style.height = auto
+    document.getElementById('hotFudge').src = './images/hotFudge.jpg'
   } else if (livesLeft.innerHTML === '3') {
     document.getElementById('hotFudge').src = ''
-    document.getElementById('twoScoops').src =
-      'https://images.unsplash.com/photo-1477505982272-ead89926a577?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8aWNlJTIwY3JlYW0lMjBjb25lJTIwd2l0aCUyMHNjb29wfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60'
-    // document.getElementById('twoScoops').style.height = '183px'
-    // document.getElementById('twoScoops').style.height = auto
+    document.getElementById('twoScoops').src = './images/twoScoop.jpg'
   } else if (livesLeft.innerHTML === '2') {
     document.getElementById('twoScoops').src = ''
-    document.getElementById('oneScoop').src =
-      'https://images.unsplash.com/photo-1526549518783-1763d32c7763?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGljZSUyMGNyZWFtJTIwY29uZSUyMHdpdGglMjBzY29vcHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60'
-    // document.getElementById('oneScoop').style.height = '183px'
-    // document.getElementById('oneScoop').style.height = auto
+    document.getElementById('oneScoop').src = './images/oneScoop.jpg'
   } else if (livesLeft.innerHTML === '1') {
     document.getElementById('oneScoop').src = ''
-    document.getElementById('cone').src =
-      '/Users/aekangipatel/GA_SEIR/Projects/Don-t_Let_the_Sundea_Melt-/images/cone.jpg'
-    // document.getElementById('cone').style.height = '183px'
-    // document.getElementById('cone').style.height = auto
+    document.getElementById('cone').src = './images/cone.jpg'
   } else {
     document.getElementById('cone').src = ''
     document.getElementById('poof').src =
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRo9aA_f-szG7GR7vqhAjojQtXMCH6i4XMZ6Q&usqp=CAU'
-    // document.getElementById('poof').style.height = '183px'
-    // document.getElementById('poof').style.height = auto
   }
 }
 sundaeImage()
